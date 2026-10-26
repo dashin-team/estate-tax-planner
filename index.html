@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>遺產稅・贈與稅 傳承規劃與預留稅源｜試算與案例</title>
+<meta name="description" content="用幾個簡單的數字，看看家庭的遺產稅大約多少、現金夠不夠，以及有哪些方式可以提早安排。內含遺產稅試算、贈與稅年度規劃、稅源缺口試算與真實案例。一般性資訊，非個案稅務或法律建議。">
+<meta name="theme-color" content="#1f5f5b">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://dashin-team.github.io/estate-tax-planner/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:site_name" content="遺產稅・贈與稅 傳承規劃">
+<meta property="og:title" content="遺產稅・贈與稅 傳承規劃與預留稅源">
+<meta property="og:description" content="先算算看家庭的遺產稅大約多少、現金夠不夠，再和家人討論怎麼提早安排。一般性資訊，非個案稅務或法律建議。">
+<meta property="og:url" content="https://dashin-team.github.io/estate-tax-planner/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="遺產稅・贈與稅 傳承規劃與預留稅源">
+<meta name="twitter:description" content="先算算看家庭的遺產稅大約多少、現金夠不夠，再和家人討論怎麼提早安排。">
+<style>
+:root{
+  --bg:#f6f4ee; --card:#ffffff; --ink:#22302f; --muted:#5d6b69; --line:#dfe3dc;
+  --accent:#1f5f5b; --accent-d:#174744; --accent-soft:#e3efec; --warm:#fbf1dc; --warm-line:#ecd9a8;
+  --warn:#8a5a00; --radius:14px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"PingFang TC","Noto Sans TC","Microsoft JhengHei","Heiti TC",system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:17px;line-height:1.75;padding-bottom:env(safe-area-inset-bottom)}
+a{color:var(--accent-d)}
+.wrap{max-width:860px;margin:0 auto;padding:0 16px}
+header.hero{background:linear-gradient(180deg,#e8f1ee 0%,var(--bg) 100%);padding:28px 0 12px}
+.hero h1{font-size:1.65rem;line-height:1.35;margin:0 0 10px;color:var(--accent-d)}
+.hero p{margin:0 0 14px;color:var(--muted)}
+.btn{appearance:none;border:1px solid var(--accent);background:var(--card);color:var(--accent-d);
+  font:inherit;font-weight:600;min-height:48px;padding:10px 18px;border-radius:999px;cursor:pointer;
+  display:inline-flex;align-items:center;justify-content:center;gap:6px;text-align:center;line-height:1.35}
+.btn:hover{background:var(--accent-soft)}
+.btn:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible,.seg button:focus-visible,.switch:focus-visible,nav a:focus-visible{outline:3px solid #f0a92e;outline-offset:2px}
+.btn.primary{background:var(--accent);color:#fff}
+.btn.primary:hover{background:var(--accent-d)}
+nav.toc{position:sticky;top:0;z-index:20;background:rgba(246,244,238,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+nav.toc .row{display:flex;gap:8px;overflow-x:auto;padding:8px 16px;max-width:860px;margin:0 auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav.toc .row::-webkit-scrollbar{display:none}
+nav.toc a{flex:0 0 auto;text-decoration:none;color:var(--ink);background:var(--card);border:1px solid var(--line);
+  padding:8px 14px;border-radius:999px;font-size:.92rem;min-height:40px;display:inline-flex;align-items:center;white-space:nowrap}
+nav.toc a:hover{background:var(--accent-soft)}
+section{padding:26px 0 6px;scroll-margin-top:60px}
+h2{font-size:1.4rem;line-height:1.4;margin:0 0 12px;color:var(--accent-d)}
+h3{font-size:1.1rem;margin:0 0 8px}
+p{margin:0 0 12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px;margin:0 0 14px}
+.callout{background:var(--warm);border:1px solid var(--warm-line);border-radius:var(--radius);padding:14px 16px;margin:0 0 14px}
+.callout b{display:block;color:var(--warn);margin-bottom:4px}
+ul.list{margin:0 0 12px;padding-left:1.3em}
+ul.list li{margin:0 0 6px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}
+.chips .btn{border-radius:12px;flex:1 1 220px;justify-content:flex-start;text-align:left;font-weight:500}
+.chips .btn[aria-pressed="true"]{background:var(--accent-soft);border-width:2px;font-weight:700}
+.seg{display:flex;background:#e8ebe4;border-radius:12px;padding:4px;gap:4px;margin:0 0 12px}
+.seg button{flex:1;appearance:none;border:0;background:transparent;font:inherit;font-weight:600;color:var(--muted);
+  min-height:48px;padding:6px 10px;border-radius:9px;cursor:pointer;line-height:1.3}
+.seg button[aria-pressed="true"]{background:var(--card);color:var(--accent-d);box-shadow:0 1px 3px rgba(0,0,0,.15)}
+.grid2{display:grid;grid-template-columns:1fr;gap:14px}
+@media(min-width:720px){.grid2{grid-template-columns:1fr 1fr}.hero h1{font-size:2rem}}
+label.f{display:block;margin:0 0 12px;font-size:.95rem;color:var(--muted);line-height:1.5}
+label.f span{display:block;margin-bottom:4px}
+input[type=number],select{width:100%;min-height:50px;font:inherit;font-size:1.1rem;font-variant-numeric:tabular-nums;
+  padding:8px 12px;border:1px solid #b9c2bb;border-radius:10px;background:#fff;color:var(--ink)}
+.switch-row{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:50px;margin:0 0 12px}
+.switch-row span{flex:1;font-size:.95rem;color:var(--muted);line-height:1.5}
+.switch{appearance:none;border:0;cursor:pointer;width:62px;height:36px;border-radius:999px;background:#b8c1ba;position:relative;flex:0 0 auto;transition:background .15s}
+.switch::after{content:"";position:absolute;top:4px;left:4px;width:28px;height:28px;border-radius:50%;background:#fff;transition:transform .15s;box-shadow:0 1px 2px rgba(0,0,0,.3)}
+.switch[aria-checked="true"]{background:var(--accent)}
+.switch[aria-checked="true"]::after{transform:translateX(26px)}
+.metrics{display:grid;grid-template-columns:1fr;gap:10px;margin:0 0 14px}
+@media(min-width:620px){.metrics{grid-template-columns:repeat(3,1fr)}}
+.metric{background:var(--accent-soft);border-radius:12px;padding:12px 14px}
+.metric .v{font-size:1.5rem;font-weight:700;color:var(--accent-d);font-variant-numeric:tabular-nums;line-height:1.3}
+.metric .l{font-weight:600;font-size:.95rem}
+.metric .d{font-size:.85rem;color:var(--muted)}
+.tbl-wrap{overflow-x:auto;margin:0 0 12px;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-size:.97rem}
+th,td{padding:10px 10px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}
+th{background:#f0f3ee;font-weight:700;white-space:nowrap}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+td.num{font-weight:600;white-space:normal}
+td:first-child{min-width:8.5em}
+#estateTable td.num{min-width:6em}
+tr.hl td{background:var(--accent-soft);font-weight:700}
+table.wide{min-width:560px}
+.eq{background:#f0f3ee;border-radius:10px;padding:10px 14px;font-weight:600;margin:0 0 12px;overflow-wrap:anywhere}
+.note{font-size:.92rem;color:var(--muted)}
+.bars{margin:0 0 12px}
+.bar{display:grid;grid-template-columns:minmax(96px,34%) 1fr;gap:4px 10px;align-items:center;margin:0 0 10px}
+.bar .lab{font-size:.92rem;line-height:1.35}
+.bar .trk{background:#eceee8;border-radius:8px;height:30px;position:relative;overflow:hidden}
+.bar .fill{background:#9db8b4;height:100%;border-radius:8px;min-width:3px}
+.bar.em .fill{background:var(--accent)}
+.bar .val{grid-column:2;font-size:.9rem;font-variant-numeric:tabular-nums;font-weight:600;margin-top:-2px}
+.cols{display:flex;align-items:flex-end;gap:3px;height:170px;padding:8px 0 0;border-bottom:2px solid var(--line);margin:0}
+.cols .c{flex:1;background:var(--accent);border-radius:4px 4px 0 0;min-height:2px}
+.cols-lab{display:flex;gap:3px;margin:4px 0 8px}
+.cols-lab span{flex:1;text-align:center;font-size:.75rem;color:var(--muted);min-height:1.2em}
+details{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);margin:0 0 12px;overflow:hidden}
+summary{cursor:pointer;list-style:none;padding:14px 44px 14px 16px;font-weight:700;min-height:52px;position:relative;line-height:1.5}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"＋";position:absolute;right:16px;top:50%;transform:translateY(-50%);color:var(--accent);font-size:1.2rem}
+details[open]>summary::after{content:"－"}
+details[open]>summary{border-bottom:1px solid var(--line);background:#f4f8f6}
+details .body{padding:14px 16px 4px}
+.prop{margin:0 0 12px}
+.prop b{display:block;font-size:.88rem;color:var(--accent-d)}
+.links{display:grid;gap:8px;margin:0 0 12px}
+.links a{display:block;text-decoration:none;background:#f7f9f6;border:1px solid var(--line);border-radius:10px;padding:10px 12px;color:var(--ink);min-height:48px}
+.links a:hover{background:var(--accent-soft)}
+.links .t{display:block;font-weight:600;color:var(--accent-d);line-height:1.5;overflow-wrap:anywhere}
+.links .s{display:block;font-size:.84rem;color:var(--muted)}
+.pc{display:grid;gap:12px;grid-template-columns:1fr;margin:0 0 12px}
+@media(min-width:720px){.pc{grid-template-columns:1fr 1fr}}
+.pc .pro,.pc .con{border-radius:var(--radius);padding:14px 16px}
+.pc .pro{background:#e6f1ea;border:1px solid #c5ddcd}
+.pc .con{background:#fbeee7;border:1px solid #efcdb9}
+.pc h3{margin-bottom:6px}
+.pc ul{margin:0;padding-left:1.2em}.pc li{margin:0 0 6px}
+.rows .r{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;margin:0 0 10px}
+.rows .lead{display:inline-block;background:var(--accent);color:#fff;border-radius:999px;font-size:.8rem;padding:0 10px;margin-bottom:4px}
+.rows .tt{font-weight:700;display:block;margin-bottom:2px}
+footer{margin-top:30px;background:#1d2d2c;color:#dfe8e6;padding:24px 0 36px;font-size:.92rem}
+footer a{color:#bfe0da}
+footer p{margin:0 0 8px}
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom));transform:translateX(-50%) translateY(20px);background:#22302f;color:#fff;
+  padding:12px 20px;border-radius:999px;opacity:0;pointer-events:none;transition:all .25s;z-index:50;font-size:.95rem;max-width:90vw;text-align:center}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.sub{margin:18px 0 8px;font-size:1.05rem;font-weight:700}
+@media print{nav.toc,.btn,.seg{display:none}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <h1>遺產稅・贈與稅<br>傳承規劃與預留稅源</h1>
+    <p>用幾個簡單的數字，看看家庭的遺產稅大約多少、現金夠不夠，以及有哪些方式可以提早安排。保險只是其中一種工具。</p>
+    <button class="btn primary" id="shareBtn" type="button" aria-label="分享這個網頁">分享</button>
+  </div>
+</header>
+<nav class="toc" aria-label="頁面目錄"><div class="row">
+  <a href="#why">為什麼要先談稅源</a>
+  <a href="#estate">遺產稅試算</a>
+  <a href="#gift">贈與稅規劃</a>
+  <a href="#sources">預留稅源的方式</a>
+  <a href="#insurance">保險怎麼看</a>
+  <a href="#gap">稅源缺口試算</a>
+  <a href="#cases">真實案例</a>
+  <a href="#myths">常見迷思</a>
+  <a href="#faq">常見問題</a>
+  <a href="#notes">說明與資料來源</a>
+</div></nav>
+<main class="wrap">
+
+<section id="why">
+  <h2>為什麼要先談稅源</h2>
+  <p>傳承規劃真正要解決的，是讓家人在需要時有足夠的現金、清楚的安排，並且少一點爭執。稅金只是其中一環，保險、贈與、信託都只是可以選擇的工具。</p>
+  <div class="callout"><b>稅金要先用現金繳清</b>
+    遺產稅繳清（或取得核准文件）之前，不能分割遺產、交付遺贈或辦理移轉登記（遺產及贈與稅法第 8 條）。從申報到取得繳清證明，常見約需 2 至 6 個月，依案件而異。股票、不動產占大宗而現金較少的家庭，這段時間比較容易現金吃緊。張榮發案就是公開的例子：現金少，分次賣股繳稅。</div>
+  <ul class="list">
+    <li>繳納期限：核定繳納通知書送達後 2 個月內，可申請延期 2 個月</li>
+    <li>應納稅額 30 萬元以上且現金確有困難，可申請分 18 期以內，或就現金不足部分申請實物抵繳（需符合規定）</li>
+    <li>分期與實物抵繳是補救辦法，事先備好現金會更從容</li>
+  </ul>
+</section>
+
+<section id="estate">
+  <h2>遺產稅試算</h2>
+  <p>金額單位皆為萬元。可先點選示例，再改成客戶的數字。</p>
+  <div class="chips" id="presets" role="group" aria-label="示例"></div>
+  <div class="seg" id="scenEstate" role="group" aria-label="稅制情境">
+    <button type="button" data-scen="now" aria-pressed="true">115 年現行<br><small>（作為 2027 假設）</small></button>
+    <button type="button" data-scen="media" aria-pressed="false">2027 媒體推估</button>
+  </div>
+  <p class="note" id="scenNote"></p>
+  <div class="grid2">
+    <div class="card">
+      <h3>財產與負債（萬元）</h3>
+      <label class="f"><span>不動產（可先以公告現值、評定現值代入）</span><input type="number" inputmode="decimal" min="0" step="any" data-f="re"></label>
+      <label class="f"><span>現金存款</span><input type="number" inputmode="decimal" min="0" step="any" data-f="cash"></label>
+      <label class="f"><span>股票、基金</span><input type="number" inputmode="decimal" min="0" step="any" data-f="st"></label>
+      <label class="f"><span>保單（非指定受益人、被視為遺產的部分）</span><input type="number" inputmode="decimal" min="0" step="any" data-f="pol"></label>
+      <label class="f"><span>其他財產</span><input type="number" inputmode="decimal" min="0" step="any" data-f="oth"></label>
+      <label class="f"><span>未償債務</span><input type="number" inputmode="decimal" min="0" step="any" data-f="debt"></label>
+      <label class="f"><span>死亡前 2 年內贈與給配偶、繼承人等的金額</span><input type="number" inputmode="decimal" min="0" step="any" data-f="gift"></label>
+    </div>
+    <div class="card">
+      <h3>家庭成員</h3>
+      <div class="switch-row"><span id="spLab">有配偶</span><button type="button" class="switch" role="switch" aria-checked="true" aria-labelledby="spLab" id="spSwitch"></button></div>
+      <label class="f"><span>子女人數（含未成年）</span><input type="number" inputmode="numeric" min="0" step="1" data-f="ch"></label>
+      <label class="f"><span>其中未成年人數</span><input type="number" inputmode="numeric" min="0" step="1" data-f="mi"></label>
+      <label class="f"><span>未成年子女距成年平均年數</span><input type="number" inputmode="numeric" min="0" step="1" data-f="yr"></label>
+      <label class="f"><span>父母人數</span><select data-f="pa"><option value="0">0</option><option value="1">1</option><option value="2">2</option></select></label>
+      <label class="f"><span>重度以上身心障礙人數</span><input type="number" inputmode="numeric" min="0" step="1" data-f="dis"></label>
+    </div>
+  </div>
+
+  <div class="card" aria-live="polite">
+    <h3>試算結果</h3>
+    <p id="resultLine"></p>
+    <div class="metrics" id="metrics"></div>
+    <div class="tbl-wrap"><table id="estateTable"><thead><tr><th>項目</th><th class="num">金額（萬元）</th></tr></thead><tbody></tbody></table></div>
+    <div class="eq">課稅遺產淨額 = 遺產總額 − 免稅額 − 各項扣除額 − 債務</div>
+    <p class="note">這是簡化試算，未計入夫妻剩餘財產差額分配、2 年內贈與已繳贈與稅的扣抵，以及農地等不計入項目。保單欄位只填被視為遺產的部分。建議預留現金的 1.2 倍是業界經驗法則，不是法定標準。實際以國稅局核定為準。</p>
+  </div>
+
+  <div class="card">
+    <h3>財產組成與稅額對照</h3>
+    <div class="bars" id="compoBars"></div>
+  </div>
+
+  <details>
+    <summary>115 年級距與扣除額一覽</summary>
+    <div class="body">
+      <div class="tbl-wrap"><table>
+        <thead><tr><th>遺產淨額級距</th><th class="num">稅率</th><th>稅額</th></tr></thead>
+        <tbody>
+          <tr><td>5,621 萬以下</td><td class="num">10%</td><td>淨額 × 10%</td></tr>
+          <tr><td>5,621 萬至 1.1242 億</td><td class="num">15%</td><td>562.1 萬 + 超過 5,621 萬部分 × 15%</td></tr>
+          <tr><td>超過 1.1242 億</td><td class="num">20%</td><td>1,405.25 萬 + 超過 1.1242 億部分 × 20%</td></tr>
+        </tbody></table></div>
+      <div class="tbl-wrap"><table>
+        <thead><tr><th>扣除項目</th><th class="num">金額</th></tr></thead>
+        <tbody>
+          <tr><td>免稅額</td><td class="num">1,333 萬</td></tr>
+          <tr><td>配偶</td><td class="num">553 萬</td></tr>
+          <tr><td>直系卑親屬（每人）</td><td class="num">56 萬，未成年者每年加扣 56 萬至成年</td></tr>
+          <tr><td>父母（每人）</td><td class="num">138 萬</td></tr>
+          <tr><td>重度以上身心障礙（每人）</td><td class="num">693 萬</td></tr>
+          <tr><td>喪葬費</td><td class="num">138 萬</td></tr>
+        </tbody></table></div>
+      <p class="note">依財政部 114 年 11 月 27 日公告（台財稅字第 11404671540 號），適用 115 年發生的繼承。</p>
+    </div>
+  </details>
+</section>
+
+<section id="gift">
+  <h2>贈與稅與年度贈與規劃</h2>
+  <p>贈與稅的免稅額是每位贈與人每年一份，與受贈人有幾位無關。分年、穩定地移轉，是常見的規劃方式之一。</p>
+  <div class="seg" id="scenGift" role="group" aria-label="稅制情境">
+    <button type="button" data-scen="now" aria-pressed="true">115 年現行</button>
+    <button type="button" data-scen="media" aria-pressed="false">2027 媒體推估</button>
+  </div>
+  <div class="grid2">
+    <div class="card">
+      <h3>設定</h3>
+      <label class="f"><span>每位贈與人每年贈與金額（萬元）</span><input type="number" inputmode="decimal" min="0" step="any" id="gAmt"></label>
+      <label class="f"><span>贈與年數（1 至 30）</span><input type="number" inputmode="numeric" min="1" max="30" step="1" id="gYears"></label>
+      <label class="f"><span>贈與人數（爸媽各一份額度）</span><select id="gDonors"><option value="1">1</option><option value="2">2</option></select></label>
+      <div class="switch-row"><span id="wedLab">第一年加入子女婚嫁贈與（父母各 100 萬）</span><button type="button" class="switch" role="switch" aria-checked="false" aria-labelledby="wedLab" id="gWedding"></button></div>
+    </div>
+    <div class="card" aria-live="polite">
+      <h3>贈與稅試算</h3>
+      <div class="tbl-wrap"><table id="giftTable"><thead><tr><th>項目</th><th class="num">金額（萬元）</th></tr></thead><tbody></tbody></table></div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="cols" id="giftCols" role="img" aria-label="累計移轉金額長條圖"></div>
+    <div class="cols-lab" id="giftColsLab"></div>
+    <p class="note">圖：累計移轉金額（萬元），橫軸為第幾年。贈與稅稅率 10%、15%、20%，級距為 2,811 萬與 5,621 萬。</p>
+  </div>
+  <div class="card">
+    <h3>規劃時要留意</h3>
+    <ul class="list">
+      <li>爸媽是各自的贈與人，各有每年 244 萬免稅額，夫妻不共用，也不能互相調用</li>
+      <li>配偶間相互贈與不計入贈與總額（遺產及贈與稅法第 20 條第 1 項第 6 款）</li>
+      <li>死亡前 2 年內贈與配偶、法定繼承人及其配偶的財產，視為遺產併入（第 15 條），已繳贈與稅可扣抵</li>
+      <li>子女婚嫁時，父母各自贈與 100 萬元以內不計入贈與總額（第 20 條第 1 項第 7 款）；實務上以結婚登記前後 6 個月內認定，需備戶籍資料與資金證明</li>
+      <li>超過免稅額的部分要依規定申報並繳納贈與稅，贈與一旦完成也不宜輕易反悔，建議和家人充分討論</li>
+    </ul>
+  </div>
+</section>
+
+<section id="sources">
+  <h2>預留稅源的方式</h2>
+  <p>沒有哪一種方式最好，通常是依家庭的資產結構、時間與想法搭配使用。</p>
+  <div class="tbl-wrap"><table class="wide">
+    <thead><tr><th>方式</th><th>優點</th><th>要留意</th></tr></thead>
+    <tbody>
+      <tr><td><b>現金</b></td><td>最單純，隨時可用，沒有認定爭議</td><td>需要長期自律保留，現金本身也屬遺產要計稅</td></tr>
+      <tr><td><b>保險</b></td><td>指定受益人的身故給付，原則上不計入遺產，受益人可直接請領</td><td>須為經核准保單；有實質課稅與最低稅負的考量；保障需求要放第一位</td></tr>
+      <tr><td><b>贈與</b></td><td>每年 244 萬免稅額，可長期分年移轉，逐步調整資產配置</td><td>死亡前 2 年內併入遺產；受贈人的管理能力與家人共識要先溝通</td></tr>
+      <tr><td><b>信託（含保險金信託）</b></td><td>可依約定分期或依用途給付，保護未成年或需要照顧的家人</td><td>需與信託業簽約並有費用；課稅仍依個案認定，契約要貼近家庭需求</td></tr>
+    </tbody></table></div>
+</section>
+
+<section id="insurance">
+  <h2>保險怎麼看</h2>
+  <p>約定於被繼承人死亡時，給付其所指定受益人的人壽保險金額，不計入遺產總額（遺產及贈與稅法第 16 條第 9 款），搭配保險法第 112 條：保險金額約定於被保險人死亡時給付指定受益人者，不得作為被保險人的遺產。這讓保險成為一種可以預先備妥現金的工具，但仍有幾個前提。</p>
+  <div class="pc">
+    <div class="pro"><h3>通常有幫助的地方</h3><ul>
+      <li>身故時由指定受益人直接請領，現金較容易及時到位</li>
+      <li>同時承擔保障責任，不只是為了稅</li>
+      <li>受益人可依家庭需要彈性指定</li></ul></div>
+    <div class="con"><h3>要留意的地方</h3><ul>
+      <li>原則上須是被繼承人同為要保人與被保險人；要保人與被保險人不同時，已繳保費累積的價值可能仍屬遺產</li>
+      <li>高齡、重病、短期、躉繳、鉅額、密集、舉債投保等情形，可能被依實質課稅原則認定併入遺產，須綜合判斷</li>
+      <li>境外未經核准保單不適用不計入遺產的規定</li>
+      <li>受益人與要保人不同人時，死亡給付每申報戶全年合計 3,740 萬元以下免計入基本所得額；超過部分計入基本所得額，基本所得額 750 萬元以下免繳基本稅額，超過部分稅率 20%</li></ul></div>
+  </div>
+  <div class="card">
+    <h3>保險金信託</h3>
+    <ul class="list">
+      <li>保險金交由信託業管理，可約定分期給付，避免一次大筆資金使用不當</li>
+      <li>可約定用於子女教育、生活照顧等用途，照顧未成年或需要長期照顧的家人</li>
+      <li>受益安排與給付方式寫得更清楚，也有助於家人之間少一點誤會</li>
+      <li>要留意信託費用、契約設計，以及課稅仍依個案認定</li>
+    </ul>
+  </div>
+</section>
+
+<section id="gap">
+  <h2>稅源缺口試算</h2>
+  <p>用上方遺產稅試算的結果，看看可動用的現金和建議預留之間有多少落差。</p>
+  <div class="grid2">
+    <div class="card">
+      <h3>輸入（萬元）</h3>
+      <label class="f"><span>可動用現金（家人可隨時動用的存款）</span><input type="number" inputmode="decimal" min="0" step="any" id="avail"></label>
+      <label class="f"><span>預計由指定受益人領取的死亡給付（受益人與要保人不同人）</span><input type="number" inputmode="decimal" min="0" step="any" id="insBenefit"></label>
+    </div>
+    <div class="card" aria-live="polite">
+      <h3>結果</h3>
+      <div class="tbl-wrap"><table id="gapTable"><thead><tr><th>項目</th><th class="num">金額（萬元）</th></tr></thead><tbody></tbody></table></div>
+    </div>
+  </div>
+  <div class="eq">建議預留缺口 = 預估稅額 × 1.2 − 可動用現金</div>
+  <div class="card"><div class="bars" id="gapBars"></div></div>
+  <p id="gapText" aria-live="polite"></p>
+  <p id="insText" class="note" aria-live="polite"></p>
+</section>
+
+<section id="cases">
+  <h2>真實案例</h2>
+  <p>以下皆為公開的判決、國稅局案例或新聞報導，只作為理解用，每個家庭的情況都不同。</p>
+  <div id="caseList"></div>
+</section>
+
+<section id="myths">
+  <h2>常見迷思</h2>
+  <div class="rows">
+    <div class="r"><span class="lead">迷思 1</span><span class="tt">每個孩子各有 244 萬免稅額？</span>免稅額是按贈與人計算，每位贈與人每年一份，與受贈人有幾位無關。同一年贈與給多位子女的總額合計後，才扣 244 萬元。</div>
+    <div class="r"><span class="lead">迷思 2</span><span class="tt">夫妻可以共用免稅額？</span>夫妻各自是贈與人，各有每年 244 萬元，不共用、不互相調用。爸媽各自贈與時，可各用自己的一份。</div>
+    <div class="r"><span class="lead">迷思 3</span><span class="tt">送出去就跟遺產無關？</span>死亡前 2 年內贈與配偶、法定繼承人及其配偶的財產，視為遺產併入；已繳贈與稅可扣抵。超過 2 年的贈與則不在此限。</div>
+  </div>
+</section>
+
+<section id="faq">
+  <h2>常見問題</h2>
+  <details><summary>遺產稅要在什麼時候繳？</summary><div class="body"><p>國稅局送達核定繳納通知書後 2 個月內繳納，可申請延期 2 個月。遺產稅繳清之前，不能分割遺產或辦理移轉登記。</p></div></details>
+  <details><summary>現金不夠怎麼辦？</summary><div class="body"><p>應納稅額 30 萬元以上且現金確有困難，可申請分 18 期以內（加計利息），或就現金不足的部分申請以實物抵繳，需符合規定與繼承人同意。這些是補救辦法，事先備好現金仍然比較從容。</p></div></details>
+  <details><summary>保險金一定不用課稅嗎？</summary><div class="body"><p>不一定。指定受益人的身故給付原則上不計入遺產，但須為經核准保單，並可能受實質課稅原則審查；受益人與要保人不同人時，還要看基本所得額（每申報戶全年死亡給付 3,740 萬元以下免計入）。個案以國稅局認定為準。</p></div></details>
+  <details><summary>配偶之間的贈與要繳贈與稅嗎？</summary><div class="body"><p>配偶相互贈與的財產不計入贈與總額。但死亡前 2 年內贈與配偶的財產，仍會視為遺產併入。</p></div></details>
+  <details><summary>2027 年免稅額會調整嗎？</summary><div class="body"><p>依法須 CPI 累計漲幅達 10% 才調整，116 年數字財政部尚未公告，通常於年底公告。本頁暫以 115 年數字作為假設，公告後更新；媒體推估僅供參考。</p></div></details>
+</section>
+
+<section id="notes">
+  <h2>說明與資料來源</h2>
+  <p>本頁為一般性資訊，非個案稅務或法律建議。數字依財政部 115 年公告（2025-11-27），116 年（2027）公告後更新。實際以國稅局核定為準。案例資料來源如各案所列，其中媒體轉載的國稅局案例，細節請對照官方原稿。</p>
+  <div class="links" id="srcLinks"></div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><b>免責聲明</b></p>
+    <p>一般性資訊，非個案稅務或法律建議；數字依財政部115年公告，116年公告後更新；實際以國稅局核定為準。</p>
+    <p>本頁為教育與討論用途，不構成任何保險商品之要約或推薦。個案請諮詢會計師、律師或國稅局，並依各項商品條款與公司規定辦理。</p>
+    <p>本頁不蒐集任何個人資料：您輸入的數字只在這支手機（或電腦）的瀏覽器內計算，不會傳送到任何地方。</p>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script id="core">
+/* 計算核心：金額單位皆為「萬元」。與原頁面公式一致。 */
+var EstateCore = (function () {
+  var K = {
+    EXEMPT_NOW: 1333, EXEMPT_MEDIA: 1487,
+    GIFT_EXEMPT_NOW: 244, GIFT_EXEMPT_MEDIA: 272,
+    SPOUSE: 553, CHILD: 56, PARENT: 138, DISABLED: 693, FUNERAL: 138,
+    RESERVE_FACTOR: 1.2, INS_LIMIT: 3740
+  };
+  function estateTax(net) {
+    if (net <= 0) return 0;
+    if (net <= 5621) return net * 0.1;
+    if (net <= 11242) return 562.1 + (net - 5621) * 0.15;
+    return 1405.25 + (net - 11242) * 0.2;
+  }
+  function giftTax(net) {
+    if (net <= 0) return 0;
+    if (net <= 2811) return net * 0.1;
+    if (net <= 5621) return 281.1 + (net - 2811) * 0.15;
+    return 702.6 + (net - 5621) * 0.2;
+  }
+  function bracketLabel(net) {
+    if (net <= 0) return "未達課稅";
+    if (net <= 5621) return "10%（淨額 × 10%）";
+    if (net <= 11242) return "15%（562.1 萬 + 超過 5,621 萬部分 × 15%）";
+    return "20%（1,405.25 萬 + 超過 1.1242 億部分 × 20%）";
+  }
+  function fmt(v) {
+    var r = Math.round(v * 100) / 100;
+    var parts = r.toFixed(2).split(".");
+    var ip = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    var d = parts[1];
+    if (d === "00") return ip;
+    if (d.charAt(1) === "0") return ip + "." + d.charAt(0);
+    return ip + "." + d;
+  }
+  function num(s) {
+    var x = parseFloat(s);
+    return isFinite(x) && x > 0 ? x : 0;
+  }
+  /* f: {re,cash,st,pol,oth,debt,gift,sp,ch,mi,yr,pa,dis}（字串）；media: 是否採 2027 媒體推估 */
+  function calcEstate(f, media) {
+    var exempt = media ? K.EXEMPT_MEDIA : K.EXEMPT_NOW;
+    var re = num(f.re), cash = num(f.cash), st = num(f.st), pol = num(f.pol), oth = num(f.oth);
+    var debt = num(f.debt), giftIn = num(f.gift);
+    var hasSpouse = f.sp === "1";
+    var children = Math.floor(num(f.ch));
+    var minors = Math.min(children, Math.floor(num(f.mi)));
+    var years = Math.min(18, Math.floor(num(f.yr)));
+    var parents = Math.min(2, Math.floor(num(f.pa)));
+    var disabled = Math.floor(num(f.dis));
+    var gross = re + cash + st + pol + oth + giftIn;
+    var dSpouse = hasSpouse ? K.SPOUSE : 0;
+    var dChild = children * K.CHILD;
+    var dMinor = minors * years * K.CHILD;
+    var dParent = parents * K.PARENT;
+    var dDis = disabled * K.DISABLED;
+    var totalDed = exempt + dSpouse + dChild + dMinor + dParent + dDis + K.FUNERAL;
+    var net = Math.max(0, gross - debt - totalDed);
+    var tax = estateTax(net);
+    var reserve = tax * K.RESERVE_FACTOR;
+    var taxPct = gross > 0 ? (tax / gross) * 100 : 0;
+    var rows = [["遺產總額（含 2 年內贈與）", fmt(gross)], ["− 免稅額", fmt(exempt)]];
+    if (dSpouse > 0) rows.push(["− 配偶扣除額", fmt(dSpouse)]);
+    if (dChild > 0) rows.push(["− 直系卑親屬扣除額（" + children + " 人）", fmt(dChild)]);
+    if (dMinor > 0) rows.push(["− 未成年加扣（" + minors + " 人 × " + years + " 年）", fmt(dMinor)]);
+    if (dParent > 0) rows.push(["− 父母扣除額（" + parents + " 人）", fmt(dParent)]);
+    if (dDis > 0) rows.push(["− 重度身障特別扣除額（" + disabled + " 人）", fmt(dDis)]);
+    rows.push(["− 喪葬費扣除額", fmt(K.FUNERAL)]);
+    if (debt > 0) rows.push(["− 未償債務", fmt(debt)]);
+    rows.push(["課稅遺產淨額", fmt(net)]);
+    rows.push(["適用級距", bracketLabel(net)]);
+    rows.push(["預估遺產稅", fmt(tax)]);
+    rows.push(["建議預留現金（稅額 × 1.2，經驗法則）", fmt(reserve)]);
+    var compo = [
+      { label: "不動產", value: re }, { label: "現金存款", value: cash },
+      { label: "股票基金", value: st }, { label: "保單（視為遺產）", value: pol },
+      { label: "其他", value: oth }, { label: "2 年內贈與併入", value: giftIn },
+      { label: "預估遺產稅", value: tax }, { label: "建議預留現金", value: reserve }
+    ].filter(function (b) { return b.value > 0; }).sort(function (a, b) { return b.value - a.value; });
+    var cashShare = reserve > 0 ? (cash / reserve) * 100 : 0;
+    var resultLine = net <= 0
+      ? "在這組數字下，課稅遺產淨額為 0，預估不需繳遺產稅。"
+      : "課稅遺產淨額 " + fmt(net) + " 萬，適用 " + bracketLabel(net).split("（")[0] + " 級距。現金存款約為建議預留現金的 " + fmt(cashShare) + "%。";
+    return { gross: gross, exempt: exempt, cash: cash, totalDed: totalDed, net: net, tax: tax, reserve: reserve,
+      taxPct: taxPct, rows: rows, compo: compo, resultLine: resultLine };
+  }
+  function calcGift(amt, yearsStr, donorsStr, wedding, media) {
+    var gExempt = media ? K.GIFT_EXEMPT_MEDIA : K.GIFT_EXEMPT_NOW;
+    var gA = num(amt);
+    var gY = Math.min(30, Math.max(1, Math.floor(num(yearsStr))));
+    var gD = String(donorsStr) === "2" ? 2 : 1;
+    var netEach = Math.max(0, gA - gExempt);
+    var taxEach = giftTax(netEach);
+    var wed = wedding ? 100 : 0;
+    var totalMoved = gA * gY * gD + wed * gD;
+    var totalTax = taxEach * gY * gD;
+    var free = Math.min(gA, gExempt) * gY * gD + wed * gD;
+    var step = Math.max(1, Math.ceil(gY / 5));
+    var points = [];
+    for (var i = 0; i < gY; i++) {
+      var cum = gA * (i + 1) * gD + wed * gD;
+      var keep = i === 0 || i === gY - 1 || (i + 1) % step === 0;
+      points.push({ label: keep ? String(i + 1) : "", value: cum, display: fmt(cum) + " 萬" });
+    }
+    return { exempt: gExempt, netEach: netEach, taxEach: taxEach, totalMoved: totalMoved, free: free, totalTax: totalTax, years: gY, points: points };
+  }
+  function calcGap(reserve, availStr, insStr) {
+    var availN = num(availStr);
+    var gap = Math.max(0, reserve - availN);
+    var insN = num(insStr);
+    var insOver = Math.max(0, insN - K.INS_LIMIT);
+    return { availN: availN, gap: gap, insOver: insOver };
+  }
+  return { K: K, estateTax: estateTax, giftTax: giftTax, bracketLabel: bracketLabel, fmt: fmt, num: num,
+    calcEstate: calcEstate, calcGift: calcGift, calcGap: calcGap };
+})();
+if (typeof module !== "undefined" && module.exports) module.exports = EstateCore;
+</script>
+<script>
+(function () {
+  "use strict";
+  var C = EstateCore, fmt = C.fmt;
+  var PRESETS = [
+    { id: "A", label: "示例一：總額 1 億・配偶＋2 位成年子女", f: { re: "6000", cash: "1000", st: "3000", pol: "0", oth: "0", debt: "0", gift: "0", sp: "1", ch: "2", mi: "0", yr: "0", pa: "0", dis: "0" } },
+    { id: "B", label: "示例二：不動產為主・現金較少", f: { re: "4500", cash: "300", st: "200", pol: "0", oth: "0", debt: "0", gift: "0", sp: "1", ch: "2", mi: "0", yr: "0", pa: "0", dis: "0" } },
+    { id: "C", label: "示例三：股票為主・有 1 位未成年子女", f: { re: "3000", cash: "500", st: "14000", pol: "0", oth: "500", debt: "0", gift: "0", sp: "1", ch: "3", mi: "1", yr: "8", pa: "0", dis: "0" } },
+    { id: "D", label: "示例四：含 2 年內贈與 750 萬", f: { re: "2000", cash: "600", st: "400", pol: "0", oth: "0", debt: "0", gift: "750", sp: "1", ch: "1", mi: "0", yr: "0", pa: "0", dis: "0" } }
+  ];
+  var CASES = [
+    { id: "c1", heading: "張榮發（長榮集團創辦人，2016 年逝世）", open: true,
+      what: "法院新聞稿載明，國稅局核定遺產總額 249.96 億元、遺產淨額 246.64 億元、核定稅額 24.05 億元，遺囑執行人申請復查後稅額為 23.73 億元。報導指出遺產以股票為主、現金很少，經全體繼承人與國稅局同意，分多次變賣長榮海運股票繳稅，2022 年 7 月繳清。",
+      learn: "資產集中在股票時，稅款可能要靠分次賣股來湊，時間與價格都不好掌握。這個案子也提醒：遺囑要顧及特留分，境外信託若委託人仍保留控制權，法院仍認定屬遺產。",
+      links: [
+        { title: "臺北高等行政法院 109 年度訴字第 1025 號 新聞稿", site: "司法院", date: "2023-01-12", href: "https://www.judicial.gov.tw/tw/cp-1888-796271-abb32-1.html" },
+        { title: "不服遺產稅計算告台北國稅局 張榮發之子張國政興訟敗訴", site: "中央社", date: "2023-01-12", href: "https://www.cna.com.tw/news/asoc/202301120313.aspx" },
+        { title: "【張國煒討遺產 2】遺產稅都繳清了官司還在打", site: "鏡週刊", date: "2023-04-03", href: "https://www.mirrormedia.mg/story/20230403inv008" }
+      ] },
+    { id: "c2", heading: "王永慶（台塑集團創辦人，2008 年逝世）", open: true,
+      what: "報導稱遺產稅 119 億元，為當時最高紀錄，適用當時舊制。遺產總額有兩種報導數字：核定時「逾 600 億元」（中新社，2010-08-03），以及最終在台遺產「528 億元」（東森／鏡週刊，2021-09-01），兩者口徑差異未釐清。稅款先以實物抵繳約 22 億元，其餘約 97 億元於 2010 年 9 月底前後以現金繳清；報導提到繼承人以質押股票、借款等方式籌措。",
+      learn: "資產規模再大，要在期限內湊出現金仍是實際的課題。稅制也會隨時間調整，但「現金要先準備」這件事不變。",
+      links: [
+        { title: "王永慶遺產稅 119 億元 創台灣最高遺產稅紀錄", site: "中新社（中國台灣網）", date: "2010-08-03", href: "https://www.taiwan.cn/jm/twsq/201008/t20100803_1476972.htm" },
+        { title: "王永慶 119 億遺產繳清", site: "人間福報", date: "2010-09-30", href: "https://www.merit-times.com.tw/NewsPage.aspx?unid=204232" },
+        { title: "王文洋纏鬥三娘 13 年大和解 王永慶 528 億遺產分配曝光", site: "東森新聞（鏡週刊授權）", date: "2021-09-01", href: "https://news.ebc.net.tw/news/living/276526" }
+      ] },
+    { id: "c3", heading: "一般家庭：2 年內贈與漏報，補稅加罰鍰逾 113 萬元", open: false,
+      what: "國稅局公布的案例（媒體轉載）：甲君 2023 年贈與配偶與子女合計 750 萬元並繳了贈與稅，2024 年過世。繼承人以為已繳贈與稅就不必再報，遺產申報時漏列。國稅局將 750 萬元併入遺產，補徵 63 萬餘元，另處罰鍰 50 萬餘元，復查被駁回。",
+      learn: "每年 244 萬元免稅額是好用的工具，但死亡前 2 年內給配偶、繼承人的贈與仍會併入遺產（已繳贈與稅可扣抵）。誠實、完整申報最重要。",
+      links: [
+        { title: "父母贈與子女超過 244 萬元有繳贈與稅，還是被課 113 萬稅金！", site: "風傳媒（資料來源：財政部）", date: "2025-08-27", href: "https://www.storm.mg/lifestyle/11063218" },
+        { title: "遺產稅申報常見陷阱！死亡前 2 年贈與配偶子女須併入", site: "安傳媒", date: "2025-08-24", href: "https://annewsmedia.com/2025/08/24/property-tax-matters/10948/" }
+      ] },
+    { id: "c4", heading: "一般家庭：境外未經核准保單，保險金併入遺產", open: false,
+      what: "甲君向香港註冊保險公司投保人壽保單，自己是被保險人、兒子是受益人，過世後兒子領約 3,000 萬元，申報時填為不計入遺產。國稅局審查認定該公司未經金管會核准，不適用保險法第 112 條，併入遺產課稅。",
+      learn: "保險能否用來預留稅源，前提之一是合法、經核准的保單。選擇保單時，保險公司與商品的合法性要先確認。",
+      links: [
+        { title: "被繼承人生前投保境外未經核准壽險保單，受益人領取的死亡保險給付應申報遺產稅", site: "財政部北區國稅局", date: "更新 2026-09-04", href: "https://www.ntbna.gov.tw/singlehtml/374fe8c4b18e48c691a6806ac02b9984?cntId=951763b838b7489789f9fb447fdd114a" },
+        { title: "境外保單無免徵遺產稅之適用（台財稅字第 09504540210 號）", site: "財政部", date: "2006-06-28", href: "https://law-out.mof.gov.tw/LawContent.aspx?id=GL006827" }
+      ] },
+    { id: "c5", heading: "高齡、重病、借款躉繳大額保單，保險金仍被課遺產稅", open: false,
+      what: "最高行政法院 98 年度判字第 1145 號（依安永文章摘述）：被繼承人 77 歲、住院期間舉債躉繳保費 2,578 萬元，身故理賠約 2,509 萬元，投保約 1 年多後過世。國稅局將躉繳保費併入遺產課稅，法院駁回繼承人上訴。",
+      learn: "保險的核心是保障。財政部列出重病、鉅額、短期、躉繳、高齡、密集、舉債、保費大於保險給付等參考態樣，須綜合判斷，單一特徵不必然被課稅。",
+      links: [
+        { title: "人壽保險實質課稅爭議：以最高行政法院 98 年度判字第 1145 號判決為例", site: "安永台灣", date: "2023-10-25", href: "https://www.ey.com/zh_tw/insights/family-enterprise/substantive-taxation-of-life-insurance" },
+        { title: "依實質課稅原則核課遺產稅之案例及參考特徵", site: "財政部高雄國稅局", date: "2020-07-24", href: "https://www.mof.gov.tw/singlehtml/384fb3077bb349ea973e7fc6f13b6974?cntId=66cb1f563fba4010a1452dce6d51d68d" }
+      ] },
+    { id: "c6", heading: "兩姊妹：遺產稅未如期繳納，被移送強制執行", open: false,
+      what: "父親遺產經臺北國稅局核定總額 4,263 萬餘元（含房地與多檔上市櫃股票），應納稅額 166 萬餘元。未如期繳納而移送行政執行，加計滯納金後欠 183 萬餘元。分署於 2022-12-27 委託賣出股票，報導稱後來股價回升，約有一成五的差距。",
+      learn: "稅額不大也要在期限內處理；現金不足時可評估申請延期、分期或實物抵繳，比被動賣股更有選擇。",
+      links: [
+        { title: "變賣姊妹花繼承上市櫃股票 全額徵回遺產稅", site: "匯流新聞網 CNEWS", date: "2023-03-17", href: "https://cnews.com.tw/224230317a10/" }
+      ] }
+  ];
+  var SOURCES = [
+    { title: "財政部公告 115 年發生繼承或贈與案件適用之免稅額、扣除額及課稅級距", site: "行政院公報", date: "2025-11-27", href: "https://gazette.nat.gov.tw/EG_FileManager/eguploadpub/eg031225/ch04/type3/gov30/num11/Eg.pdf" },
+    { title: "公告 115 年發生繼承或贈與案件適用遺產稅、贈與稅之免稅額及級距", site: "財政部賦稅署", date: "2025-11-27", href: "https://www.dot.gov.tw/singlehtml/ch26?cntId=266ef2de8dd54f9494bd5c399b3f323a" },
+    { title: "如何繳納遺產稅？", site: "財政部稅務入口網", date: "更新 2024-01-03", href: "https://www.etax.nat.gov.tw/etwmain/tax-info/understanding/tax-q-and-a/national/estate-tax/certification/QDxvkxp" },
+    { title: "遺產及贈與稅法 第 15 條（死亡前 2 年贈與併計）", site: "全國法規資料庫", href: "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=15" },
+    { title: "遺產及贈與稅法 第 16 條（不計入遺產總額）", site: "全國法規資料庫", href: "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=16" },
+    { title: "遺產及贈與稅法 第 20 條（不計入贈與總額）", site: "全國法規資料庫", href: "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0340072&flno=20" },
+    { title: "保險法 第 112 條", site: "全國法規資料庫", href: "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=G0390002&flno=112" },
+    { title: "父母各自贈與婚嫁子女財物不超過 100 萬元，不計入贈與總額", site: "財政部北區國稅局", date: "2026-02-02", href: "https://www.mof.gov.tw/singlehtml/384fb3077bb349ea973e7fc6f13b6974?cntId=e59b6f61c0e042dd9671615b6e58149c" },
+    { title: "公告 115 年度所得基本稅額相關金額（死亡給付 3,740 萬元）", site: "行政院公報", date: "2025-11-19", href: "https://gazette.nat.gov.tw/EG_FileManager/eguploadpub/eg031218/ch04/type3/gov30/num13/Eg.htm" }
+  ];
+
+  function $(s, r) { return (r || document).querySelector(s); }
+  function $$(s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); }
+  function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
+
+  var state = { media: false, f: JSON.parse(JSON.stringify(PRESETS[0].f)), avail: "1000", ins: "0",
+    gAmt: "244", gYears: "10", gDonors: "2", gWedding: false };
+
+  function linksHtml(links) {
+    return links.map(function (l) {
+      var meta = [l.site, l.date].filter(Boolean).join("・");
+      return '<a href="' + esc(l.href) + '" target="_blank" rel="noopener noreferrer"><span class="t">' + esc(l.title) + '</span><span class="s">' + esc(meta) + ' ↗</span></a>';
+    }).join("");
+  }
+  function barsHtml(bars, emphLabel) {
+    var max = bars.reduce(function (m, b) { return Math.max(m, b.value); }, 0) || 1;
+    return bars.map(function (b) {
+      var w = Math.max(1, Math.round(b.value / max * 100));
+      return '<div class="bar' + (b.label === emphLabel ? ' em' : '') + '"><div class="lab">' + esc(b.label) + '</div><div class="trk"><div class="fill" style="width:' + w + '%"></div></div><div class="val">' + esc(fmt(b.value)) + ' 萬</div></div>';
+    }).join("");
+  }
+  function tableBody(rows, hlLabels) {
+    return rows.map(function (r) {
+      var hl = hlLabels && hlLabels.indexOf(r[0]) >= 0 ? ' class="hl"' : '';
+      return '<tr' + hl + '><td>' + esc(r[0]) + '</td><td class="num">' + esc(r[1]) + '</td></tr>';
+    }).join("");
+  }
+
+  var est = null;
+  function renderEstate() {
+    est = C.calcEstate(state.f, state.media);
+    $("#resultLine").textContent = est.resultLine;
+    $("#metrics").innerHTML =
+      '<div class="metric"><div class="v">' + fmt(est.gross) + ' 萬</div><div class="l">遺產總額</div></div>' +
+      '<div class="metric"><div class="v">' + fmt(est.tax) + ' 萬</div><div class="l">預估遺產稅</div><div class="d">約占遺產總額 ' + fmt(est.taxPct) + '%</div></div>' +
+      '<div class="metric"><div class="v">' + fmt(est.reserve) + ' 萬</div><div class="l">建議預留現金</div><div class="d">稅額 × 1.2，經驗法則</div></div>';
+    $("#estateTable tbody").innerHTML = tableBody(est.rows, ["課稅遺產淨額", "預估遺產稅", "建議預留現金（稅額 × 1.2，經驗法則）"]);
+    $("#compoBars").innerHTML = est.compo.length ? barsHtml(est.compo, "建議預留現金") : '<p class="note">請先輸入財產金額。</p>';
+    renderGap();
+  }
+  function renderGap() {
+    var g = C.calcGap(est.reserve, state.avail, state.ins);
+    $("#gapTable tbody").innerHTML = tableBody([
+      ["預估遺產稅（來自上方試算）", fmt(est.tax)],
+      ["建議預留現金（× 1.2，經驗法則）", fmt(est.reserve)],
+      ["可動用現金", fmt(g.availN)],
+      ["建議預留缺口", fmt(g.gap)]
+    ], ["建議預留缺口"]);
+    var bars = [{ label: "建議預留現金", value: est.reserve }, { label: "可動用現金", value: g.availN }, { label: "建議預留缺口", value: g.gap }]
+      .filter(function (b) { return b.value > 0; }).sort(function (a, b) { return b.value - a.value; });
+    $("#gapBars").innerHTML = bars.length ? barsHtml(bars, "建議預留缺口") : '<p class="note">目前沒有可比較的數字。</p>';
+    $("#gapText").textContent = g.gap > 0
+      ? "依這組數字，建議預留現金比可動用現金多 " + fmt(g.gap) + " 萬。可以和家人討論，是用現金累積、保險、贈與或信託來補足，並看哪一種最符合家庭的需求。"
+      : "依這組數字，可動用現金已高於建議預留現金。仍建議定期檢視資產變化。";
+    $("#insText").textContent = g.insOver > 0
+      ? "預計死亡給付超過 3,740 萬元的部分約 " + fmt(g.insOver) + " 萬，會計入受益人申報戶的基本所得額，需與其他基本所得合併計算，請依個案與專業人士確認。"
+      : "";
+  }
+  function renderGift() {
+    var g = C.calcGift(state.gAmt, state.gYears, state.gDonors, state.gWedding, state.media);
+    $("#giftTable tbody").innerHTML = tableBody([
+      ["每年免稅額（每位贈與人）", fmt(g.exempt)],
+      ["每位贈與人每年課稅贈與淨額", fmt(g.netEach)],
+      ["每位贈與人每年贈與稅", fmt(g.taxEach)],
+      ["合計移轉金額", fmt(g.totalMoved)],
+      ["其中免稅移轉", fmt(g.free)],
+      ["合計贈與稅", fmt(g.totalTax)]
+    ], ["合計贈與稅"]);
+    var max = g.points.reduce(function (m, p) { return Math.max(m, p.value); }, 0) || 1;
+    $("#giftCols").innerHTML = g.points.map(function (p, i) {
+      return '<div class="c" style="height:' + Math.max(1, Math.round(p.value / max * 100)) + '%" title="第 ' + (i + 1) + ' 年：' + esc(p.display) + '"></div>';
+    }).join("");
+    $("#giftColsLab").innerHTML = g.points.map(function (p) { return '<span>' + esc(p.label) + '</span>'; }).join("");
+  }
+  function renderScen() {
+    $$(".seg button").forEach(function (b) { b.setAttribute("aria-pressed", String((b.getAttribute("data-scen") === "media") === state.media)); });
+    $("#scenNote").textContent = state.media
+      ? "媒體推估情境：財經教育類 Instagram 貼文（2026 年 10 月）以 CPI 自 2022 年累計上漲 11.61% 推估，2027 年遺產稅免稅額約 1,486 至 1,488 萬元（本頁以 1,487 萬元計算），贈與稅免稅額約 272 萬元。這是推估、以財政部年底公告為準；扣除額與級距未推估，仍用 115 年數值。"
+      : "116 年（2027）數字財政部尚未公告，本頁暫以 115 年公告數字作為假設，公告後更新。";
+  }
+  function fillInputs() {
+    $$("[data-f]").forEach(function (el) { el.value = state.f[el.getAttribute("data-f")]; });
+    $("#spSwitch").setAttribute("aria-checked", String(state.f.sp === "1"));
+    $("#avail").value = state.avail; $("#insBenefit").value = state.ins;
+    $("#gAmt").value = state.gAmt; $("#gYears").value = state.gYears; $("#gDonors").value = state.gDonors;
+    $("#gWedding").setAttribute("aria-checked", String(state.gWedding));
+  }
+  function renderAll() { renderScen(); renderEstate(); renderGift(); }
+
+  // presets
+  $("#presets").innerHTML = PRESETS.map(function (p, i) { return '<button type="button" class="btn" data-p="' + i + '" aria-pressed="' + (i === 0) + '">' + esc(p.label) + '</button>'; }).join("");
+  $("#presets").addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-p]"); if (!b) return;
+    var p = PRESETS[+b.getAttribute("data-p")];
+    state.f = JSON.parse(JSON.stringify(p.f)); state.avail = p.f.cash;
+    $$("#presets button").forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); });
+    fillInputs(); renderEstate();
+  });
+  // scenario toggles (synced)
+  $$(".seg").forEach(function (seg) {
+    seg.addEventListener("click", function (e) {
+      var b = e.target.closest("button[data-scen]"); if (!b) return;
+      state.media = b.getAttribute("data-scen") === "media"; renderAll();
+    });
+  });
+  // inputs
+  $$("[data-f]").forEach(function (el) {
+    var h = function () { state.f[el.getAttribute("data-f")] = el.value; $$("#presets button").forEach(function (x) { x.setAttribute("aria-pressed", "false"); }); renderEstate(); };
+    el.addEventListener("input", h); el.addEventListener("change", h);
+  });
+  $("#spSwitch").addEventListener("click", function () {
+    state.f.sp = state.f.sp === "1" ? "0" : "1"; this.setAttribute("aria-checked", String(state.f.sp === "1")); renderEstate();
+  });
+  function bind(id, key) { var el = $(id); var h = function () { state[key] = el.value; (key === "avail" || key === "ins") ? renderGap() : renderGift(); }; el.addEventListener("input", h); el.addEventListener("change", h); }
+  bind("#avail", "avail"); bind("#insBenefit", "ins"); bind("#gAmt", "gAmt"); bind("#gYears", "gYears"); bind("#gDonors", "gDonors");
+  $("#gWedding").addEventListener("click", function () { state.gWedding = !state.gWedding; this.setAttribute("aria-checked", String(state.gWedding)); renderGift(); });
+
+  // static lists
+  $("#caseList").innerHTML = CASES.map(function (c) {
+    return '<details' + (c.open ? ' open' : '') + '><summary>' + esc(c.heading) + '</summary><div class="body">' +
+      '<div class="prop"><b>發生什麼事</b>' + esc(c.what) + '</div>' +
+      '<div class="prop"><b>學到什麼</b>' + esc(c.learn) + '</div>' +
+      '<div class="links">' + linksHtml(c.links) + '</div></div></details>';
+  }).join("");
+  $("#srcLinks").innerHTML = linksHtml(SOURCES);
+
+  // share
+  var toastTimer;
+  function toast(msg) { var t = $("#toast"); t.textContent = msg; t.classList.add("show"); clearTimeout(toastTimer); toastTimer = setTimeout(function () { t.classList.remove("show"); }, 2400); }
+  $("#shareBtn").addEventListener("click", function () {
+    var url = location.href.split("#")[0];
+    var data = { title: document.title, text: "遺產稅・贈與稅試算與預留稅源，先算算看再和家人討論。", url: url };
+    if (navigator.share) {
+      navigator.share(data).catch(function (err) { if (err && err.name !== "AbortError") copy(url); });
+    } else { copy(url); }
+  });
+  function copy(url) {
+    function fallback() {
+      var ta = document.createElement("textarea"); ta.value = url; ta.setAttribute("readonly", ""); ta.style.position = "fixed"; ta.style.opacity = "0";
+      document.body.appendChild(ta); ta.select();
+      var ok = false; try { ok = document.execCommand("copy"); } catch (e) {}
+      document.body.removeChild(ta);
+      toast(ok ? "已複製連結，可貼到 LINE 分享" : "請長按網址列複製連結");
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(url).then(function () { toast("已複製連結，可貼到 LINE 分享"); }, fallback);
+    } else { fallback(); }
+  }
+
+  fillInputs(); renderAll();
+})();
+</script>
+</body>
+</html>
